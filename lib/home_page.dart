@@ -16,15 +16,17 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cadastro'),
+        title: const Text('Cadastro'), 
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
+       //Image.asset('assets/images/meu.pmg', width: 100, height: 100,),
       body: Padding(
         padding: const EdgeInsets.only(
           top: 30,
           left: 20,
           right: 20,
+          
         ),
         child: Form(
           key: _formKey,
@@ -47,6 +49,7 @@ class _HomePageState extends State<HomePage> {
                   return null;
                 },
               ),
+              
               const SizedBox(height: 10),
               TextFormField(
                 obscureText: true,
