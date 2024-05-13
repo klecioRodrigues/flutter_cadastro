@@ -20,8 +20,22 @@ class _HomePageState extends State<LoginPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bem vindo'),
-        backgroundColor: Colors.blue,
+        title: Row(
+          children: [
+            Hero(
+              tag: 'Art_Fit',
+              child: Image.asset(
+                'assets/topo.png.jpg',
+                height: 30,
+              ),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            const Text('Bem vindo'),
+          ],
+        ),
+        backgroundColor: Colors.black,
         foregroundColor: Colors.white,
       ),
       body: Padding(
@@ -34,7 +48,7 @@ class _HomePageState extends State<LoginPage> {
           key: _formKey,
           child: ListView(
             children: [
-              Lottie.asset('assets/welcome.json'),
+              Lottie.asset('assets/cell.json'),
               TextFormField(
                 controller: controllerEmail,
                 autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -79,13 +93,16 @@ class _HomePageState extends State<LoginPage> {
                 height: 10,
               ),
               InkWell(
-                onTap: () {
+                onTap: () async {
                   if (_formKey.currentState!.validate()) {
                     setState(() {
                       clicou = !clicou;
                     });
 
-                    // Navigator.pushReplacementNamed(context, '/detalhes');
+                    await Future.delayed(
+                      const Duration(seconds: 3),
+                    );
+                    Navigator.pushReplacementNamed(context, '/home');
                   }
                 },
                 child: Center(
