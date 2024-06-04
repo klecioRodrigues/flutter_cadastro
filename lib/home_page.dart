@@ -1,88 +1,154 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  final _formKey = GlobalKey<FormState>();
-  final controllerEmail = TextEditingController();
-  final controllerSenha = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cadastro'), 
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color(0xFF204353),
         foregroundColor: Colors.white,
+        title: const Text(
+          'Art_Fit',
+          style: TextStyle(fontSize: 30),
+        ),
       ),
-       //Image.asset('assets/images/meu.pmg', width: 100, height: 100,),
-      body: Padding(
-        padding: const EdgeInsets.only(
-          top: 30,
-          left: 20,
-          right: 20,
-          
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const UserAccountsDrawerHeader(
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: AssetImage('assets/foto2.jpg'),
+              ),
+              accountName: Text('nome@exemplo'),
+              accountEmail: Text('email@exemplo'),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage('assets/image2.png'),
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text('Home'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(Icons.campaign),
+              title: const Text('Notificações'),
+              trailing: ClipOval(
+                child: Container(
+                  color: Colors.red,
+                  width: 20,
+                  height: 20,
+                  child: const Center(
+                    child: Text(
+                      "1",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(Icons.people),
+              title: const Text('Clientes'),
+              onTap: () {
+                Navigator.pushNamed(context, '/entrega');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.apartment),
+              title: const Text('Sobre'),
+              onTap: () {
+                Navigator.pushNamed(context, '/entrega');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.help),
+              title: const Text('Ajuda'),
+              onTap: () {
+                Navigator.pushNamed(context, '/entrega');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.exit_to_app),
+              title: const Text('Sair'),
+              onTap: () {
+                Navigator.pushNamed(context, '/exit');
+              },
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Center(
+              child: Text(
+                "versao 1.0 ",
+                style: TextStyle(fontSize: 15),
+              ),
+            )
+          ],
         ),
-        child: Form(
-          key: _formKey,
-          child: ListView(
-            children: [
-              TextFormField(
-                controller: controllerEmail,
-                autovalidateMode: AutovalidateMode.onUserInteraction,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Digite seu email',
-                ),
-                validator: (email) {
-                  if (email!.isEmpty) {
-                    return 'Digite um email';
-                  }
-                  if (!email.contains('@')) {
-                    return 'Digite um email válido';
-                  }
-                  return null;
-                },
-              ),
-              
-              const SizedBox(height: 10),
-              TextFormField(
-                obscureText: true,
-                controller: controllerSenha,
-                autovalidateMode: AutovalidateMode.onUserInteraction,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Digite sua senha',
-                ),
-                validator: (senha) {
-                  if (senha!.isEmpty) {
-                    return 'Digite uma senha';
-                  }
-                   if (senha.length > 6  ){
-                    return 'Senha com maximo de 6 caracters';
-                  }
-                  if (!senha.contains ('123456')) {
-                    return 'Digite uma senha válida';
-                  }
-                 
-                  return null;
-                },
-              ),
-               const SizedBox(height: 5),
-              ElevatedButton(
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {}
-                },
-                child: const Text('Enviar'),
-              ),
-            ],
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const SizedBox(
+            height: 60,
           ),
-        ),
+          Center(
+            child: Container(
+              width: 80,
+              height: 80,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(30),
+                ),
+              ),
+              child: Image.asset('assets/exercicio2.webp'),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Center(
+            child: Container(
+              width: 80,
+              height: 80,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(30),
+                ),
+              ),
+              child: Image.asset('assets/cono1.png'),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Center(
+            child: Container(
+              width: 80,
+              height: 80,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(30),
+                ),
+              ),
+              child: Image.asset('assets/tempo1.png'),
+            ),
+          ),
+        ],
       ),
     );
   }

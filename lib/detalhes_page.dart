@@ -7,14 +7,23 @@ class DetalhesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
+        title: const Text('Detalhes'),
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
-      body: const Center(
-        child: Text(
-          'teste',
-          style: TextStyle(fontSize: 40),
+      body: Center(
+        child: Column(
+          children: [
+            const Text(
+              'Tela 2',
+              style: TextStyle(fontSize: 40),
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('Voltar')),
+          ],
         ),
       ),
     );
