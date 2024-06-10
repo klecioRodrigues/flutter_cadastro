@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class DetalhesPage extends StatelessWidget {
   const DetalhesPage({super.key});
@@ -7,25 +8,57 @@ class DetalhesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Detalhes'),
-        backgroundColor: Colors.blue,
+        title: const Text('Ajuda'),
+        backgroundColor: const Color.fromARGB(255, 0, 211, 53),
         foregroundColor: Colors.white,
       ),
-      body: Center(
-        child: Column(
-          children: [
-            const Text(
-              'Tela 2',
-              style: TextStyle(fontSize: 40),
+      
+       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          const Gap(20),
+          Container(
+            height: 43,
+            color: const Color.fromARGB(255, 123, 194, 158),
+            child: const Text(
+              'Bem Vindo Ao Suporte Art_Fit !!!',
+              style: TextStyle(fontSize: 27),
             ),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text('Voltar')),
-          ],
-        ),
+          ),
+          const Gap(20),
+          Container(
+            height: 33,
+            color: const Color.fromARGB(255, 123, 194, 158),
+            child: const Text(
+              'Contato para ajuda: 81323200842',
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+          const Gap(20),
+          Container(
+            height: 33,
+            color: const Color.fromARGB(255, 123, 194, 158),
+            child: const Text(
+              'Email para ajuda: Suport_art_fit@gmail.com',
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+          const Gap(20),
+          Container(
+            height: 33,
+            color: const Color.fromARGB(255, 123, 194, 158),
+            child: const Text(
+              'Site: www.suport-es.org.br',
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+          const Gap(50),
+          Image.asset(
+            'assets/images/image2.png',
+            height: 300,
+          ),
+        ],
       ),
-    );
+    );  
   }
 }

@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
           width: width,
           height: height,
           child:
-              Hero(tag: 'Art_Fit', child: Image.asset('assets/topo.png.jpg')),
+              Hero(tag: 'Art_Fit', child: Image.asset('assets/images/topo.png.jpg')),
         ),
       ),
     );

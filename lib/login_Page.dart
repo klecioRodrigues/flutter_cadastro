@@ -25,7 +25,7 @@ class _HomePageState extends State<LoginPage> {
             Hero(
               tag: 'Art_Fit',
               child: Image.asset(
-                'assets/fundo2.jpg',
+                'assets/images/fundo2.jpg',
                 height: 30,
               ),
             ),
@@ -43,7 +43,7 @@ class _HomePageState extends State<LoginPage> {
       ),
       body: Stack(children: [
         Image.asset(
-          'assets/fundo2.jpg',
+          'assets/images/fundo2.jpg',
           fit: BoxFit.cover,
           width: double.infinity,
           height: double.infinity,

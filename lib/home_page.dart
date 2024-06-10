@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -20,14 +21,14 @@ class HomePage extends StatelessWidget {
           children: [
             const UserAccountsDrawerHeader(
               currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage('assets/foto2.jpg'),
+                backgroundImage: AssetImage('assets/images/foto2.jpg'),
               ),
               accountName: Text('nome@exemplo'),
               accountEmail: Text('email@exemplo'),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage('assets/image2.png'),
+                  image: AssetImage('assets/images/image2.png'),
                 ),
               ),
             ),
@@ -37,38 +38,17 @@ class HomePage extends StatelessWidget {
               onTap: () {},
             ),
             ListTile(
-              leading: const Icon(Icons.campaign),
-              title: const Text('Notificações'),
-              trailing: ClipOval(
-                child: Container(
-                  color: Colors.red,
-                  width: 20,
-                  height: 20,
-                  child: const Center(
-                    child: Text(
-                      "1",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              onTap: () {},
-            ),
-            ListTile(
               leading: const Icon(Icons.people),
               title: const Text('Clientes'),
               onTap: () {
-                Navigator.pushNamed(context, '/entrega');
+                Navigator.pushNamed(context, '/clientes');
               },
             ),
             ListTile(
               leading: const Icon(Icons.apartment),
               title: const Text('Sobre'),
               onTap: () {
-                Navigator.pushNamed(context, '/entrega');
+                Navigator.pushNamed(context, '/sobre');
               },
             ),
             ListTile(
@@ -98,55 +78,62 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const SizedBox(
-            height: 60,
-          ),
-          Center(
-            child: Container(
-              width: 80,
-              height: 80,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30),
-                ),
-              ),
-              child: Image.asset('assets/exercicio2.webp'),
+          const Gap(20),
+          Container(
+            height: 43,
+            width: 43,
+            color: const Color.fromARGB(255, 85, 209, 218),
+            child: const Text(
+              'Segunda: Treino de peito e biceps',
+              style: TextStyle(fontSize: 30),
             ),
           ),
-          const SizedBox(
-            height: 10,
-          ),
-          Center(
-            child: Container(
-              width: 80,
-              height: 80,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30),
-                ),
-              ),
-              child: Image.asset('assets/cono1.png'),
+          const Gap(20),
+          Container(
+            height: 43,
+            width: 43,
+            color: const Color.fromARGB(255, 85, 209, 218),
+            child: const Text(
+              'Terça: Treino de Pernas',
+              style: TextStyle(fontSize: 30),
             ),
           ),
-          const SizedBox(
-            height: 10,
-          ),
-          Center(
-            child: Container(
-              width: 80,
-              height: 80,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30),
-                ),
-              ),
-              child: Image.asset('assets/tempo1.png'),
+          const Gap(20),
+          Container(
+            height: 43,
+            width: 43,
+            color: const Color.fromARGB(255, 85, 209, 218),
+            child: const Text(
+              'Quarta: Treino de Costas e Triceps',
+              style: TextStyle(fontSize: 30),
             ),
+          ),
+          const Gap(20),
+          Container(
+            height: 43,
+            width: 43,
+            color: const Color.fromARGB(255, 85, 209, 218),
+            child: const Text(
+              'Quinta: Treino de Gluteis e Posterior',
+              style: TextStyle(fontSize: 30),
+            ),
+          ),
+          const Gap(20),
+          Container(
+            height: 43,
+            width: 43,
+            color: const Color.fromARGB(255, 85, 209, 218),
+            child: const Text(
+              'Sexta: Treino de Peito e Costas ',
+              style: TextStyle(fontSize: 30),
+            ),
+          ),
+          const Gap(50),
+          Image.asset(
+            'assets/images/topo.png.jpg',
+            height: 100,
           ),
         ],
       ),
