@@ -35,7 +35,8 @@ class HomePage extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.home),
               title: const Text('Home'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/login');},
             ),
             ListTile(
               leading: const Icon(Icons.people),
@@ -55,7 +56,7 @@ class HomePage extends StatelessWidget {
               leading: const Icon(Icons.help),
               title: const Text('Ajuda'),
               onTap: () {
-                Navigator.pushNamed(context, '/entrega');
+                Navigator.pushNamed(context, '/detalhes');
               },
             ),
             ListTile(
@@ -83,7 +84,7 @@ class HomePage extends StatelessWidget {
           const Gap(20),
           Container(
             height: 43,
-            width: 43,
+        
             color: const Color.fromARGB(255, 85, 209, 218),
             child: const Text(
               'Segunda: Treino de peito e biceps',
@@ -93,7 +94,7 @@ class HomePage extends StatelessWidget {
           const Gap(20),
           Container(
             height: 43,
-            width: 43,
+           
             color: const Color.fromARGB(255, 85, 209, 218),
             child: const Text(
               'Terça: Treino de Pernas',
@@ -103,7 +104,7 @@ class HomePage extends StatelessWidget {
           const Gap(20),
           Container(
             height: 43,
-            width: 43,
+           
             color: const Color.fromARGB(255, 85, 209, 218),
             child: const Text(
               'Quarta: Treino de Costas e Triceps',
@@ -113,7 +114,7 @@ class HomePage extends StatelessWidget {
           const Gap(20),
           Container(
             height: 43,
-            width: 43,
+           
             color: const Color.fromARGB(255, 85, 209, 218),
             child: const Text(
               'Quinta: Treino de Gluteis e Posterior',
@@ -123,7 +124,7 @@ class HomePage extends StatelessWidget {
           const Gap(20),
           Container(
             height: 43,
-            width: 43,
+           
             color: const Color.fromARGB(255, 85, 209, 218),
             child: const Text(
               'Sexta: Treino de Peito e Costas ',
@@ -133,7 +134,7 @@ class HomePage extends StatelessWidget {
           const Gap(50),
           Image.asset(
             'assets/images/topo.png.jpg',
-            height: 100,
+            height: 200,
           ),
         ],
       ),

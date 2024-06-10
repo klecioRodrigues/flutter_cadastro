@@ -9,9 +9,12 @@ class ExitPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:  AppBar(
-        title: const Text('Deseja sair do app?'),
-      ),
-      body: FloatingActionButton(
+        title: const Text('Deseja sair do app?\n'
+        'pressione o X para sair !!!'),toolbarTextStyle: const TextStyle(fontSize: 100
+      ),),
+      
+      body:
+       FloatingActionButton(
         onPressed: () => exit(0),
         tooltip: 'Close app',
         child:  const Icon(Icons.close),

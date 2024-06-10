@@ -37,88 +37,47 @@ class ClientePage extends StatelessWidget {
         children: [
           const Gap(10),
           Container(
-            height: 30,
+            height: 110,
             width: 120,
             color: const Color.fromARGB(255, 187, 250, 175),
             child: const Text(
-              'nome: Jose ',
+              'nome: Jose \nsobrenome: Silva'
+             '\ndata de nascimento :15-01-1985'
+             '\nCPF:724.203.074-96'
+             '\n',
               style: TextStyle(fontSize: 20),
             ),
           ),
           const Gap(10),
-          Container(
-            height: 30,
-            width: 180,
-            color: const Color.fromARGB(255, 187, 250, 175),
-            child: const Text(
-              'sobrenome: Silva',
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
-          const Gap(10),
-          Container(
-            height: 30,
-            width: 300,
-            color: const Color.fromARGB(255, 187, 250, 175),
-            child: const Text(
-              'data de nascimento :15-01-1985',
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
-          const Gap(10),
-          Container(
-            height: 30,
-            width: 250,
-            color: const Color.fromARGB(255, 187, 250, 175),
-            child: const Text(
-              'Nº do CPF:724.203.074-96',
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
-          const Gap(10),
-          Container(
-            height: 30,
+           Container(
+            height: 110,
             width: 120,
             color: const Color.fromARGB(255, 187, 250, 175),
             child: const Text(
-              'nome: Joao ',
+              'nome: João \nsobrenome: Rodrigues'
+             '\ndata de nascimento :05-04-1979'
+             '\nCPF:751.985.594-58'
+             '\n',
               style: TextStyle(fontSize: 20),
             ),
           ),
-          const Gap(10),
-          Container(
-            height: 30,
-            width: 230,
+           const Gap(10),
+           Container(
+            height: 110,
+            width: 120,
             color: const Color.fromARGB(255, 187, 250, 175),
             child: const Text(
-              'sobrenome: Rodrigues',
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
-          const Gap(10),
-          Container(
-            height: 30,
-            width: 300,
-            color: const Color.fromARGB(255, 187, 250, 175),
-            child: const Text(
-              'Data de nascimento:05-04-1979',
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
-          const Gap(10),
-          Container(
-            height: 30,
-            width: 270,
-            color: const Color.fromARGB(255, 187, 250, 175),
-            child: const Text(
-              'Nº do CPF:751.985.594-58',
+              'nome: Maria \nsobrenome: Gomes'
+             '\ndata de nascimento :14-10-2000'
+             '\nCPF:221.755.876-30'
+             '\n',
               style: TextStyle(fontSize: 20),
             ),
           ),
           const Gap(50),
           Image.asset(
             'assets/images/topo.png.jpg',
-            height: 200,
+            height: 150,
           ),
         ],
       ),
