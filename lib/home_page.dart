@@ -33,11 +33,9 @@ class HomePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Home'),
-              onTap: () {
-                Navigator.pushNamed(context, '/login');},
-            ),
+                leading: const Icon(Icons.home),
+                title: const Text('Home'),
+                onTap: () {}),
             ListTile(
               leading: const Icon(Icons.people),
               title: const Text('Clientes'),
@@ -56,7 +54,7 @@ class HomePage extends StatelessWidget {
               leading: const Icon(Icons.help),
               title: const Text('Ajuda'),
               onTap: () {
-                Navigator.pushNamed(context, '/detalhes');
+                Navigator.pushNamed(context, '/ajuda');
               },
             ),
             ListTile(
@@ -84,7 +82,6 @@ class HomePage extends StatelessWidget {
           const Gap(20),
           Container(
             height: 43,
-        
             color: const Color.fromARGB(255, 85, 209, 218),
             child: const Text(
               'Segunda: Treino de peito e biceps',
@@ -94,7 +91,6 @@ class HomePage extends StatelessWidget {
           const Gap(20),
           Container(
             height: 43,
-           
             color: const Color.fromARGB(255, 85, 209, 218),
             child: const Text(
               'Terça: Treino de Pernas',
@@ -104,7 +100,6 @@ class HomePage extends StatelessWidget {
           const Gap(20),
           Container(
             height: 43,
-           
             color: const Color.fromARGB(255, 85, 209, 218),
             child: const Text(
               'Quarta: Treino de Costas e Triceps',
@@ -114,7 +109,6 @@ class HomePage extends StatelessWidget {
           const Gap(20),
           Container(
             height: 43,
-           
             color: const Color.fromARGB(255, 85, 209, 218),
             child: const Text(
               'Quinta: Treino de Gluteis e Posterior',
@@ -124,7 +118,6 @@ class HomePage extends StatelessWidget {
           const Gap(20),
           Container(
             height: 43,
-           
             color: const Color.fromARGB(255, 85, 209, 218),
             child: const Text(
               'Sexta: Treino de Peito e Costas ',

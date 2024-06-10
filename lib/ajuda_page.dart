@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class DetalhesPage extends StatelessWidget {
-  const DetalhesPage({super.key});
+class AjudaPage extends StatelessWidget {
+  const AjudaPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +12,7 @@ class DetalhesPage extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 0, 211, 53),
         foregroundColor: Colors.white,
       ),
-      
-       body: Column(
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const Gap(20),
@@ -59,6 +58,6 @@ class DetalhesPage extends StatelessWidget {
           ),
         ],
       ),
-    );  
+    );
   }
 }

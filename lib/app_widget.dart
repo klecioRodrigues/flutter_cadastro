@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cadastro/ajuda_page.dart';
 import 'package:flutter_cadastro/anima_Page.dart';
 import 'package:flutter_cadastro/clientes_Page.dart';
-import 'package:flutter_cadastro/detalhes_Page.dart';
 import 'package:flutter_cadastro/exit_page.dart';
 import 'package:flutter_cadastro/home_Page.dart';
 import 'package:flutter_cadastro/login_Page.dart';
@@ -23,7 +23,7 @@ class AppWidget extends StatelessWidget {
         '/anima': (context) => const AnimaPage(),
         '/clientes': (context) => const ClientePage(),
         '/sobre': (context) => const SobrePage(),
-        '/detalhes': (context) => const DetalhesPage(),
+        '/ajuda': (context) => const AjudaPage(),
         '/exit': (context) => const ExitPage(),
       },
     );
