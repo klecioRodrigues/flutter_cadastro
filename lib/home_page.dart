@@ -99,7 +99,7 @@ class HomePage extends StatelessWidget {
                   ),
                   ListTile(
                     onTap: () {},
-                    title: const Text(' Treino de força',
+                    title: const Text('Treino de força',
                         style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                   ListTile(

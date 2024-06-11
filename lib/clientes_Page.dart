@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class ClientePage extends StatelessWidget {
-  const ClientePage({super.key});
+class ClientesPage extends StatelessWidget {
+  const ClientesPage({super.key});
 
   get title => null;
 
@@ -29,55 +29,124 @@ class ClientePage extends StatelessWidget {
             ),
           ],
         ),
-        backgroundColor: Colors.green,
+        backgroundColor: const Color.fromARGB(255, 76, 83, 175),
         foregroundColor: Colors.white,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: Stack(
         children: [
-          const Gap(10),
-          Container(
-            height: 110,
-            width: 120,
-            color: const Color.fromARGB(255, 187, 250, 175),
-            child: const Text(
-              'nome: Jose \nsobrenome: Silva'
-             '\ndata de nascimento :15-01-1985'
-             '\nCPF:724.203.074-96'
-             '\n',
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
-          const Gap(10),
-           Container(
-            height: 110,
-            width: 120,
-            color: const Color.fromARGB(255, 187, 250, 175),
-            child: const Text(
-              'nome: João \nsobrenome: Rodrigues'
-             '\ndata de nascimento :05-04-1979'
-             '\nCPF:751.985.594-58'
-             '\n',
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
-           const Gap(10),
-           Container(
-            height: 110,
-            width: 120,
-            color: const Color.fromARGB(255, 187, 250, 175),
-            child: const Text(
-              'nome: Maria \nsobrenome: Gomes'
-             '\ndata de nascimento :14-10-2000'
-             '\nCPF:221.755.876-30'
-             '\n',
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
-          const Gap(50),
           Image.asset(
-            'assets/images/topo.png.jpg',
-            height: 150,
+            'assets/images/meu.png',
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          ListView(
+            children: [
+              ExpansionTile(
+                title: const Text(
+                  'João da Silva:',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('dt_nacimento: (25/10/1888)',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('cpf: 252.616.272-87',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              ),
+              const Gap(40),
+              ExpansionTile(
+                title: const Text('Maria Vitória de Melo:',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('dt_nacimento: (10/06/2000)',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('cpf: 443.656.887-80',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              ),
+               const Gap(40),
+              ExpansionTile(
+                title: const Text('Robson Francisco:',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text(
+                      'dt_nacimento: (04/11/2002)',
+                    ),
+                  ),
+                   ListTile(
+                    onTap: () {},
+                    title: const Text('cpf: 332.887.112-30',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              ),
+               const Gap(40),
+              ExpansionTile(
+                title: const Text('Eduarda Maria da Silva:',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('dt_nacimento: (28/12/2001)',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('cpf: 111.333.444-55',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              ),
+               const Gap(40),
+              ExpansionTile(
+                title: const Text('Severino Francisco de Melo:',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('dt_nacimento: (06/02/1885)',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('cpf: 444.666.111-22',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              ),
+               const Gap(40),
+              ExpansionTile(
+                title: const Text('Gilberto Gonçalves da Silva:',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('dt_nacimento: (10/10/2005) ',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                   ListTile(
+                    onTap: () {},
+                    title: const Text('cpf: 887.764.445-54',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              )
+            ],
           ),
         ],
       ),
