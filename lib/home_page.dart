@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -76,61 +75,93 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          const Gap(20),
-          Container(
-            height: 43,
-            color: const Color.fromARGB(255, 85, 209, 218),
-            child: const Text(
-              'Segunda: Treino de peito e biceps',
-              style: TextStyle(fontSize: 30),
+      body: ListView(children: [
+        ExpansionTile(
+          title: const Text('Segunda-Feira'),
+          children: [
+            ListTile(
+              onTap: () {},
+              title: const Text('treino de peito = seções'),
             ),
-          ),
-          const Gap(20),
-          Container(
-            height: 43,
-            color: const Color.fromARGB(255, 85, 209, 218),
-            child: const Text(
-              'Terça: Treino de Pernas',
-              style: TextStyle(fontSize: 30),
+            ListTile(
+              onTap: () {},
+              title: const Text(''),
             ),
-          ),
-          const Gap(20),
-          Container(
-            height: 43,
-            color: const Color.fromARGB(255, 85, 209, 218),
-            child: const Text(
-              'Quarta: Treino de Costas e Triceps',
-              style: TextStyle(fontSize: 30),
+            ListTile(
+              onTap: () {},
+              title: const Text('2C International Lager'),
             ),
-          ),
-          const Gap(20),
-          Container(
-            height: 43,
-            color: const Color.fromARGB(255, 85, 209, 218),
-            child: const Text(
-              'Quinta: Treino de Gluteis e Posterior',
-              style: TextStyle(fontSize: 30),
+          ],
+        ),
+        ExpansionTile(
+          title: const Text('3 Czech Lager'),
+          children: [
+            ListTile(
+              onTap: () {},
+              title: const Text('2A International Lager'),
             ),
-          ),
-          const Gap(20),
-          Container(
-            height: 43,
-            color: const Color.fromARGB(255, 85, 209, 218),
-            child: const Text(
-              'Sexta: Treino de Peito e Costas ',
-              style: TextStyle(fontSize: 30),
+            ListTile(
+              onTap: () {},
+              title: const Text('2B International Lager'),
             ),
-          ),
-          const Gap(50),
-          Image.asset(
-            'assets/images/topo.png.jpg',
-            height: 200,
-          ),
-        ],
-      ),
+            ListTile(
+              onTap: () {},
+              title: const Text('2C International Lager'),
+            ),
+          ],
+        ),
+        ExpansionTile(
+          title: const Text('4 Pale Malty European Lager'),
+          children: [
+            ListTile(
+              onTap: () {},
+              title: const Text('2A International Lager'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('2B International Lager'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('2C International Lager'),
+            ),
+          ],
+        ),
+        ExpansionTile(
+          title: const Text('4 Pale Malty European Lager'),
+          children: [
+            ListTile(
+              onTap: () {},
+              title: const Text('2A International Lager'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('2B International Lager'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('2C International Lager'),
+            ),
+          ],
+        ),
+        ExpansionTile(
+          title: const Text('4 Pale Malty European Lager'),
+          children: [
+            ListTile(
+              onTap: () {},
+              title: const Text('2A International Lager'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('2B International Lager'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('2C International Lager'),
+            ),
+          ],
+        )
+      ]),
     );
   }
 }
