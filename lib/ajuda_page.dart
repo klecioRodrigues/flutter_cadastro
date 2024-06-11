@@ -23,11 +23,11 @@ title: Row(
             ),
             const Text(
               'Ajuda',
-              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
             ),
           ],
         ),
-        backgroundColor: const Color.fromARGB(255, 194, 226, 195),
+        backgroundColor: const Color.fromARGB(255, 172, 214, 173),
         foregroundColor: const Color.fromARGB(255, 255, 252, 252),
       ),
       body: Stack(
@@ -129,6 +129,18 @@ title: Row(
                   ),
                 ],
               ),
+              const Gap(50),
+              ExpansionTile(
+                title: const Text('Whatsapp:',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('81-545335167 ',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              )
             ],
           ),
         ],

@@ -25,7 +25,7 @@ class ClientesPage extends StatelessWidget {
             ),
             const Text(
               'Clientes',
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
             ),
           ],
         ),
@@ -60,7 +60,7 @@ class ClientesPage extends StatelessWidget {
                   ),
                 ],
               ),
-              const Gap(40),
+              const Gap(30),
               ExpansionTile(
                 title: const Text('Maria Vitória de Melo:',
                     style: TextStyle(fontWeight: FontWeight.bold)),
@@ -77,7 +77,7 @@ class ClientesPage extends StatelessWidget {
                   ),
                 ],
               ),
-               const Gap(40),
+               const Gap(30),
               ExpansionTile(
                 title: const Text('Robson Francisco:',
                     style: TextStyle(fontWeight: FontWeight.bold)),
@@ -95,7 +95,7 @@ class ClientesPage extends StatelessWidget {
                   ),
                 ],
               ),
-               const Gap(40),
+               const Gap(30),
               ExpansionTile(
                 title: const Text('Eduarda Maria da Silva:',
                     style: TextStyle(fontWeight: FontWeight.bold)),
@@ -112,7 +112,7 @@ class ClientesPage extends StatelessWidget {
                   ),
                 ],
               ),
-               const Gap(40),
+               const Gap(30),
               ExpansionTile(
                 title: const Text('Severino Francisco de Melo:',
                     style: TextStyle(fontWeight: FontWeight.bold)),
@@ -129,7 +129,7 @@ class ClientesPage extends StatelessWidget {
                   ),
                 ],
               ),
-               const Gap(40),
+               const Gap(30),
               ExpansionTile(
                 title: const Text('Gilberto Gonçalves da Silva:',
                     style: TextStyle(fontWeight: FontWeight.bold)),

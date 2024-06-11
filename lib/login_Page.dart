@@ -38,12 +38,12 @@ class _HomePageState extends State<LoginPage> {
             ),
           ],
         ),
-        backgroundColor: const Color.fromARGB(176, 255, 255, 255),
+        backgroundColor: const Color.fromARGB(175, 78, 81, 255),
         foregroundColor: Colors.white,
       ),
       body: Stack(children: [
         Image.asset(
-          'assets/images/fundo2.jpg',
+          'assets/images/R.png',
           fit: BoxFit.cover,
           width: double.infinity,
           height: double.infinity,
@@ -66,7 +66,7 @@ class _HomePageState extends State<LoginPage> {
                     border: OutlineInputBorder(),
                     labelText: 'Digite seu email',
                     labelStyle: TextStyle(
-                        color: Color.fromARGB(255, 0, 255, 89), fontSize: 20.0),
+                        color: Color.fromARGB(255, 255, 255, 255), fontSize: 20.0),
                   ),
                   validator: (email) {
                     if (email!.isEmpty) {
@@ -90,7 +90,7 @@ class _HomePageState extends State<LoginPage> {
                     border: OutlineInputBorder(),
                     labelText: 'Digite sua senha',
                     labelStyle: TextStyle(
-                        color: Color.fromARGB(216, 0, 255, 0), fontSize: 20.0),
+                        color: Color.fromARGB(215, 255, 255, 255), fontSize: 20.0),
                   ),
                   validator: (password) {
                     if (password!.isEmpty) {
