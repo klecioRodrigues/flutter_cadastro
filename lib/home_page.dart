@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -35,8 +34,7 @@ class HomePage extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.home),
               title: const Text('Home'),
-              onTap: () {
-                Navigator.pushNamed(context, '/login');},
+              onTap: () {},
             ),
             ListTile(
               leading: const Icon(Icons.people),
@@ -56,7 +54,7 @@ class HomePage extends StatelessWidget {
               leading: const Icon(Icons.help),
               title: const Text('Ajuda'),
               onTap: () {
-                Navigator.pushNamed(context, '/detalhes');
+                Navigator.pushNamed(context, '/ajuda');
               },
             ),
             ListTile(
@@ -78,63 +76,126 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: Stack(
         children: [
-          const Gap(20),
-          Container(
-            height: 43,
-        
-            color: const Color.fromARGB(255, 85, 209, 218),
-            child: const Text(
-              'Segunda: Treino de peito e biceps',
-              style: TextStyle(fontSize: 30),
-            ),
-          ),
-          const Gap(20),
-          Container(
-            height: 43,
-           
-            color: const Color.fromARGB(255, 85, 209, 218),
-            child: const Text(
-              'Terça: Treino de Pernas',
-              style: TextStyle(fontSize: 30),
-            ),
-          ),
-          const Gap(20),
-          Container(
-            height: 43,
-           
-            color: const Color.fromARGB(255, 85, 209, 218),
-            child: const Text(
-              'Quarta: Treino de Costas e Triceps',
-              style: TextStyle(fontSize: 30),
-            ),
-          ),
-          const Gap(20),
-          Container(
-            height: 43,
-           
-            color: const Color.fromARGB(255, 85, 209, 218),
-            child: const Text(
-              'Quinta: Treino de Gluteis e Posterior',
-              style: TextStyle(fontSize: 30),
-            ),
-          ),
-          const Gap(20),
-          Container(
-            height: 43,
-           
-            color: const Color.fromARGB(255, 85, 209, 218),
-            child: const Text(
-              'Sexta: Treino de Peito e Costas ',
-              style: TextStyle(fontSize: 30),
-            ),
-          ),
-          const Gap(50),
           Image.asset(
-            'assets/images/topo.png.jpg',
-            height: 200,
+            'assets/images/imagem3.jpg',
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          ListView(
+            children: [
+              ExpansionTile(
+                title: const Text(
+                  'Segunda-Feira',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('treino de peito = 10  seções',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    title: const Text(' Treino de força',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('Cardiovascular',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              ),
+              ExpansionTile(
+                title: const Text('terça-feira',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('Atividade recreativa ou treino leve',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('Corrida de 3 min na exteira',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('perna = 10 seções',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              ),
+              ExpansionTile(
+                title: const Text('quarta-feira',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text(
+                      'Atividade recreativa ou treino leve',
+                    ),
+                  ),
+                ],
+              ),
+              ExpansionTile(
+                title: const Text('Quinta-feira',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('Malhar Agachamento',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('perna = 15 seções',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('Corrida na exteira',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              ),
+              ExpansionTile(
+                title: const Text('Sexta-feira',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('treino de força ',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('treino de perna = 20 seções',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('Corrida na Exteira',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              ),
+              ExpansionTile(
+                title: const Text('Sabado',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                children: [
+                  ListTile(
+                    onTap: () {},
+                    title: const Text('Atividade recreativa ou treino leve ',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              )
+            ],
           ),
         ],
       ),
