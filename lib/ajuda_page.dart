@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 class AjudaPage extends StatelessWidget {
   const AjudaPage({super.key});
@@ -12,52 +11,93 @@ class AjudaPage extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 0, 211, 53),
         foregroundColor: Colors.white,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          const Gap(20),
-          Container(
-            height: 43,
-            color: const Color.fromARGB(255, 123, 194, 158),
-            child: const Text(
-              'Bem Vindo Ao Suporte Art_Fit !!!',
-              style: TextStyle(fontSize: 27),
+      body: ListView(children: [
+        ExpansionTile(
+          title: const Text('TELEFONES:'),
+          children: [
+            ListTile(
+              onTap: () {},
+              title: const Text('81999438372'),
             ),
-          ),
-          const Gap(20),
-          Container(
-            height: 33,
-            color: const Color.fromARGB(255, 123, 194, 158),
-            child: const Text(
-              'Contato para ajuda: 81323200842',
-              style: TextStyle(fontSize: 20),
+            ListTile(
+              onTap: () {},
+              title: const Text('81978462727'),
             ),
-          ),
-          const Gap(20),
-          Container(
-            height: 33,
-            color: const Color.fromARGB(255, 123, 194, 158),
-            child: const Text(
-              'Email para ajuda: Suport_art_fit@gmail.com',
-              style: TextStyle(fontSize: 20),
+            ListTile(
+              onTap: () {},
+              title: const Text('080036133054'),
             ),
-          ),
-          const Gap(20),
-          Container(
-            height: 33,
-            color: const Color.fromARGB(255, 123, 194, 158),
-            child: const Text(
-              'Site: www.suport-es.org.br',
-              style: TextStyle(fontSize: 20),
+          ],
+        ),
+        ExpansionTile(
+          title: const Text('Email:'),
+          children: [
+            ListTile(
+              onTap: () {},
+              title: const Text('suporttecnico@gmail.com'),
             ),
-          ),
-          const Gap(50),
-          Image.asset(
-            'assets/images/image2.png',
-            height: 300,
-          ),
-        ],
-      ),
+            ListTile(
+              onTap: () {},
+              title: const Text('suportcasual@gmail.com'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('suportmanual@gmail.com'),
+            ),
+          ],
+        ),
+        ExpansionTile(
+          title: const Text('Sites:'),
+          children: [
+            ListTile(
+              onTap: () {},
+              title: const Text('www.suport-es.org.br'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('www.support.apple.com/pt-br'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('www.gruposuport.com.br'),
+            ),
+          ],
+        ),
+        ExpansionTile(
+          title: const Text('4 Pale Malty European Lager'),
+          children: [
+            ListTile(
+              onTap: () {},
+              title: const Text('2A International Lager'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('2B International Lager'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('2C International Lager'),
+            ),
+          ],
+        ),
+        ExpansionTile(
+          title: const Text('4 Pale Malty European Lager'),
+          children: [
+            ListTile(
+              onTap: () {},
+              title: const Text('2A International Lager'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('2B International Lager'),
+            ),
+            ListTile(
+              onTap: () {},
+              title: const Text('2C International Lager'),
+            ),
+          ],
+        )
+      ]),
     );
   }
 }
