@@ -1,4 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -62,11 +66,12 @@ class _HomePageState extends State<LoginPage> {
                   controller: controllerEmail,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   decoration: const InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
                     prefixIcon: Icon(Icons.person),
                     border: OutlineInputBorder(),
                     labelText: 'Digite seu email',
-                    labelStyle: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255), fontSize: 20.0),
+                    labelStyle: TextStyle(color: Colors.black, fontSize: 20.0),
                   ),
                   validator: (email) {
                     if (email!.isEmpty) {
@@ -86,11 +91,12 @@ class _HomePageState extends State<LoginPage> {
                   obscureText: true,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   decoration: const InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
                     prefixIcon: Icon(Icons.lock),
                     border: OutlineInputBorder(),
                     labelText: 'Digite sua senha',
-                    labelStyle: TextStyle(
-                        color: Color.fromARGB(215, 255, 255, 255), fontSize: 20.0),
+                    labelStyle: TextStyle(color: Colors.black, fontSize: 20.0),
                   ),
                   validator: (password) {
                     if (password!.isEmpty) {
